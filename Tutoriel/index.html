@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="more/style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+
+  <progress value="0" max="100" id="scroll-progress"></progress>
+
+  <header>
+    <h1>-- Tutoriel de VOTRE premier jeu --</h1>
+  </header>
+
+  <div style="display: flex; align-items: center;">
+
+    <section style="flex: 1;">
+      <h2>Introduction</h2>
+      <p>Bienvenue dans ce tuto qui t'apprendra comment créer un simple jeu en utilisant Python !</p>
+      <p>Tout d'abord on va commencer par quelque chose de simple, afficher un petit carré rouge qui se déplace.</p>
+      <p>Simple non ?</p>
+      <p>Et bien pas tant que ça ! C'est ce que nous allons découvrir ensemble.</p>
+      <p>C'est parti !</p>
+    </section>
+  
+    <div class="gif-container" style="width: 300px; height: 300px; margin-right: 450px; margin-top: 50px;">
+      <div class="tenor-gif-embed" data-postid="18648997" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%">
+        <a href="https://tenor.com/view/naruto-thumbsup-like-good-nice-gif-18648997">Naruto Thumbsup GIF</a>from <a href="https://tenor.com/search/naruto-gifs">Naruto GIFs</a>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  
+
+  <section>
+    <h2>Exemple de jeu</h2>
+    <p>Voici comme illustration un petit jeu fait par nos soins que tu peux tester.</p>
+    <p>Oui oui c'est vrai !</p>
+    <p>Utilise ZQSD pour déplacer le personnage.</p>
+    <div id="game-container">
+      <div id="character"></div>
+    </div>
+    <p>Alors ? Plutôt sympa non ?</p>
+    <p>Oui bon... on est d'accord, c'est pas du Minecraft ou du Call of Duty...</p>
+    <p>Mais c'est un début !</p>
+  </section>
+
+  <section style="margin-top: 100px;">
+    <h2>Avant de commencer, petite analyse</h2>
+    <p>Comme tu as pu tester ce magnifique et génialissime petit jeu, tu dois peut-être te dire "C'est nul, c'est juste un carré rouge..." Et tu as raison !</p>
+    <p>Voici donc une leçon importante de la programmation : la patience.</p>
+    <p>Quand tu aura réussit à t'approprier toutes les bases, ce petit carré rouge pourra se transformer en personnage de ton choix et pourrais même être animé !
+        Des ennemis pourraient apparaitre de pour l'attaquer et le fond bleu moche pourrait être modifié en un magnifique décors avec un défilement parallaxe !
+        HA HA ! En voilà un joli mot compliqué ! Pas d'inquiétude, on verra ça un autre jour peut-être.</p>
+    <p>Bref, revenons au plus important. Lors de la création de ce jeu, il a fallu faire plusieur choses, en voici la liste :
+        -La création de la page (évidemment)
+        -La création de la boite de jeu, le carré bleu qui délimitera le jeu entier sur ta page 
+        -La création du personnage
+        -Faire en sorte qu'il puisse bouger grâce au clavier
+        -Et la partie un peu plus galère : les collisions pour pas que notre joueur s'échappe du jeu !</p>
+    <p>Pourquoi la délimitation du cadre du jeu est la partie galère ? Parce qu'on aura besoin.... DES MATHEMATIQUES ! (fuyez tant que vous le pouvez !!!)</p>   
+  </section>
+
+    <section style="margin-top: 100px;">
+        <h2>Étape 1: Créer la fenêtre</h2>
+        <p>Pour avour notre jeu, il faut ouvrir une nouvelle fenêtre pour pouvoir y mettre tout ce que l'on veut. Pour se faire ce n'est pas bien compliqué !
+          Commençons donc par appeler notre meilleur outil : ✨Pygame✨</p>
+        <p>Qu'est ce que c'est et à quoi ça sert ? Et bien pygame est une librairie, une sorte de caisse remplies de choses qui vont nous aider à créer un jeu
+          comme par exemple le fait d'afficher des images ou autre. En gros, il est surtout là pour afficher ce qu'on veut.</p>
+        <p>Premièrement, essayons d'aller le chercher et de l'appeler pour qu'il "s'allume". Ne prenez pas peur, il suffit juste de 2 pettites lignes de codes !</p>
+        <pre><code>
+          <p>import pygame</p>
+          <p>pygame.init()</p>
+        </code></pre>
+        <p>Ici, import sert à aller chercher pygame pour pouvoir l'utiliser et init (qui est une fonction comme tu as pu le voir avec ses parenthèses) sert à réveiller
+          pygame et concrètement lui dire "heho ! je vais avoir besoin de toi !". Si on ne le force pas à venir, on ne peut pas l'utiliser et faire notre jeu... (un gros flemmard quoi)</p>
+        <p>Bien ! Maintenant qu'on a ça on peut ENFIN créer notre fenêtre. Tout d'abord, nous devons choisir sa taille. Voici un exemple :</p>
+        <pre><code>
+          <p>largeur = 600</p>
+          <p>hauteur = 400</p>
+        </code></pre>
+        <p>Ces deux valeurs sont obligatoires !!! Notre prochaine fonction qui va afficher cette fenêtre prends en paramètre deux chiffres qui vont délimiter notre fenêtre.
+          Et toutes fonctions qui prends un ou plusieurs paramètres ne peuvent pas fonctionner sans ! C'est une chose importante à retenir, car pour donner un exemple, on ne peut
+          pas demander à quelqu'un de dessiner sans qu'il ait de papier et de crayon. C'est pareil ici. On ne peux pas dire à une fonction de faire quelque chose sans lui donner ce qu'elle à besoin.</p>
+        <p>Maintenant que tu sais ça, tu peux donc rajouter cette fameuse fonction.</p>
+        <pre><code>
+          <p>fenetre = pygame.display.set_mode((largeur, hauteur))</p>
+        </code></pre>
+        <p>Pour être sûr que tu as bien tout, voici une image du rendu que nous avons vu depuis le départ (les messages verts sont ce qu'on appelle des commentaires, rajoute les si tu veux,
+          ils sont là uniquement pour se reprérer dans le code, ils ne vont rien changer à ton jeu):</p>
+
+          <div style="display: flex;">
+
+            <div>
+              <img src="assets/CreationFenetre.PNG" alt="CreationFenetre PNG">
+            </div>
+        
+            <div class="gif-container" style="width: 350px; height: 350px; margin-left: 30px;">
+              <div class="tenor-gif-embed" data-postid="24855787" data-share-method="host" data-aspect-ratio="1.20301" data-width="100%">
+                <a href="https://tenor.com/view/tada-ta-da-jennifer-aniston-gif-24855787">Tada Jennifer GIF</a>from <a href="https://tenor.com/search/tada-gifs">Tada GIFs</a>
+              </div>
+            </div>
+        
+          </div>
+          <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        <p>Alors ? Qu'est ce que ça donne ? Essaye de lancer ton programme et regarde ce que ça donne ! Attention : fais bien CTRL C dans ton terminal pour arrêter ton programme
+          si besoin.</p>
+        <p>Si tout va bien, tu as une petite fenêtre noire qui s'affiche puis se referme quelque secondes après. Si c'est le cas, bravo ! Tu as finis une première étape et tu peux être fier
+          de toi !</p>
+        <p>Petit exercice bonus (mais en vrai fais le c'est mieux) : essaye de changer les valeurs de la taille de la fenêtre et trouve une que tu aimes bien ! Même si tu pourras
+          la changer à tout moment. Arriveras tu à trouver la taille exacte pour mettre le jeu en plein écran ?</p>
+    </section>
+
+    <div class="secret-code-container" style="margin-top: 100px;">
+      <p>Comment s'appelle la librairie utilisée pour faire des jeux ? (écris tout en minuscules)</p>
+    </div>
+
+    <div class="secret-code-container" style="margin-top: 50px;">
+      <label for="secret-code">Code secret :</label>
+      <input type="password" id="secret-code" />
+      <button onclick="checkSecretCode()">Vérifier</button>
+    </div>
+    
+    
+
+    <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+
+      <div class="gif-container" style="width: 500px; height: 500px; ">
+        <div class="tenor-gif-embed" data-postid="17946376" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%">
+          <a href="https://tenor.com/view/clapping-clapping-hands-goku-dbz-dragon-ball-gif-17946376">Clapping Clapping Hands GIF</a>from 
+          <a href="https://tenor.com/search/clapping-gifs">Clapping GIFs</a>
+        </div> 
+      </div>
+    
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+  <footer>
+    <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+  </footer>
+
+  <script src="Jeu/script.js"></script>
+  <script src="more/script.js"></script>
+</body>
+</html>

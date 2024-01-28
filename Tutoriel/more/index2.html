@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+    
+  <progress value="0" max="100" id="scroll-progress"></progress>
+
+    <div style="display: flex;">
+        <section style="flex: 2; margin-left: 20px;">
+        <h1>Étape 2: Le coeur du jeu</h1>
+        <p>Tu as remarqué que la fenêtre se fermait au bout de quelques instants, ce qui est un problème ! 😬 Imagine que tu joues à un jeu et là BAM d'un coup il se ferme... 
+          Pas très pratique... 😑 Mais alors déjà, pourquoi ça fait ça ?</p>
+        <p>Et bien quand ton programme se lance, il crée la fenêtre comme tu lui as demandé mais... après plus rien. Du coup, ne sachant pas quoi faire d'autre, il 
+          s'arrête. Tout simplement.</p>
+        <p>Alors pour que ton jeu reste allumer tout le temps, nous allons faire ce qu'on appelle une bouche infinie ! Tu te rappelle peut-être de ça 
+          quand on avait fait le jeu de devinette ensemble. Non ? Pas grave, heureusement tes super profs sont là pour apporter toutes les réponses à 
+          tes questions ! Oui on sait, on est géniaux. 😋</p>
+        <h2>Les boucles WHILE</h2>
+        <p>Mais déjà qu'est ce qu'une boucle en programmation ?</p>
+        <p>On parle de boucles lorsqu'on répète le ou les mêmes ordres plusieurs fois, comme si je te disais de compter jusqu'à 10, tu vas faire ton chiffre + 1 jusqu'à 10.
+          En gros, tu vas compter en boucle 10 fois. Ca va pas trop compliqué ? 😄</p>
+        <div style="margin-left: 400px; margin-top: 50px; margin-bottom: 50px;">
+          <img src="../assets/BoucleWhile.PNG" alt="BoucleWhile PNG">
+        </div>
+        <p>En terme de programmation voici un petit exemple de boucle :</p>
+        <pre><code><p>compteur = 1</p><p>while compteur <= 10:</p>
+        <p>    print("Voici une phrase qui va être affichée 10 fois.")</p>
+        <p>    compteur = compteur + 1</p></code></pre>
+        <p>Dans cet exemple, on comprends que notre compteur va gagner +1 jusqu'à atteindre 10. En même temps on écrit une phrase qui sera affiché 10 fois vu que 
+          print fait aussi parti de notre boucle. Toutes les instructions mises dans une boucle vont forcément être répetées !</p>
+        <p>Lorsque tu écris une boucle while, il faut faire attention à deux choses :</p>
+          <ul>-la première ligne se termine toujours par deux points “:”</ul>
+          <ul>-le bloc de code qui contient les instructions doit être indiqué par une indentation, c'est-à-dire un léger décalage vers la droite avec la touche TAB. 
+          C’est comme ça que Python fait la différence entre ce qui est inclus dans la boucle et le reste du programme.</ul>
+        <p>Maintenant, si tu met en condition de boucle True, ta boucle sera INFINIE ! Ainsi, il n'y aura plus qu'à ajouter break ou une fonction qui sert à arrêter ton 
+          programme quand tu en aura envie. Par exemple quand le joueur à gagné ou quand il cliquera sur la petite croix en haut de la fenêtre. Bah tiens ! Occupons nous de ça !</p>
+        <p>Mais avant ça écris ta boucle infinie. A partir de maintenant, on va presque tout le temps écrire dedans.</p>
+        <p>Quand c'est fait, tu peux passer à la suite et voir un autre type de boucle qui fonctionne presque pareil.
+        </p>
+        </section>
+
+        <section style="flex: 1; margin-top: 60px;">
+          <div class="tenor-gif-embed" data-postid="13705323" data-share-method="host" data-aspect-ratio="1.78571" data-width="300%">
+            <a href="https://tenor.com/view/gon-freecss-wondering-thinking-gif-13705323">Gon Freecss Wondering GIF</a>
+            from <a href="https://tenor.com/search/gon+freecss-gifs">Gon Freecss GIFs</a></div>
+           <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </section>
+        
+        <section style="flex: 2; margin-top: 1400px;">
+          <div class="tenor-gif-embed" data-postid="16043645" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%">
+            <a href="https://tenor.com/view/my-hero-academia-izuku-nerd-taking-notes-study-gif-16043645">My Hero Academia Izuku GIF</a>
+            from <a href="https://tenor.com/search/my+hero+academia-gifs">My Hero Academia GIFs</a></div>
+           <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </section>
+    </div>
+
+    <div><section>
+      <h2>Les boucles FOR</h2>
+      <p>Cette façon de crée une boucle est un peu plus complexe 😰 donc il va falloir être très attentif ! Mais si tu ne comprend pas totalement
+        le concept, ce n'est pas très grave tu n'es sûrement pas le seul et on fera sûrement un cours tous ensemble pour voir ça plus en détails</p>
+      <p>Ce qui a de différent par rapport à while, c'est que for à besoin d'une liste. Une liste est un type de valeur très fort car elle peut
+        contenir en elle plusieurs valeur. Cette liste peut par exemple avoir plusieurs mots ou plusieurs chiffres. Voici un exemple de comment ça s'écrit :</p>
+      <pre><code><p>liste = ["Saitama", "Ichigo", "Naruto"]</p></code></pre>
+      <p>Comme tu peux le voir, cette liste contient 3 mots (ou plutôt 3 noms dans ce cas, mais bref !)</p>
+      <p>On a donc notre liste et notre boucle for va la parcourir, c'est-à-dire qu'elle va regarder les éléments qui sont dedans un par un.</p>
+      <pre><code><p>liste = ["Saitama", "Ichigo", "Naruto"]</p>
+        <p>for personnage in liste:</p><p>    print(personnage)</p></code></pre>
+      <p>La boucle for commence par la ligne for personnage in liste:. Cette ligne définit la variable personnage (ce qui est pratique, car on a pas à le faire avant nous-même).
+        Du coup ça lui donne la valeur du premier élément de la liste. Dans cet exemple, personnage devient alors "Saitama". Ensuite, on entre dans une boucle. La 
+        boucle va répéter print(personnage) tant que la valeur de personnage n'est pas égale à la valeur du dernier élément de la liste (donc Naruto).
+        À chaque tour de la boucle, la valeur de personnage est remplacée par la valeur du prochain élément de la liste, chaque élément est séparé par
+        une virgule. Cela signifie que la première fois que la boucle s'exécute, la valeur de personnage est "Saitama". La deuxième fois que la boucle s'exécute, 
+        la valeur de personnage est "Ichigo". Et ainsi de suite. Quand la valeur de personnage atteint la valeur du dernier élément de la liste, la boucle s'arrête</p>
+      <p>Maintenant que vous savez ça, vous pouvez ENFIN coder ! 😅</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/BoucleForGame.PNG" alt="BoucleForGame PNG">
+      </div>
+      <p>C'est peut-être un peu confus maintenant qu'on y ajoute de l'anglais et un fonction de pygame qu'on ne connait pas... Mais c'est pas si compliqué,
+        ici on  crée une boucle qui va parcourir tous les événements qui se produisent dans le jeu. La boucle va aller sur chaque événement et 
+        les mettre dans la variable event.</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/BoucleForAndIfGame.PNG" alt="BoucleWhileForAndIfGame PNG">
+      </div>
+      <p>Tu l'as peut-être compris ce qu'il se passe ici, on vérifie si l'événement actuel est de type QUIT (genre on clique sur la croix). Si c'est le cas, la boucle va 
+        exécuter le code qui se trouve dans le if que voici :</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/BoucleExit.PNG" alt="BoucleExit PNG">
+      </div>
+      <p>Enfin, on dit à pygame et au programme de s'arrêter. Si tu as compris la logique, tu peux lancer ton programme pour vérifier si tout va bien !
+        Normalement tu as une fenêtre qui s'affiche jusqu'à que tu décide de la fermer. 👍</p>
+    </section></div>
+
+  <footer>
+    <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

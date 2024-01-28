@@ -1,0 +1,37 @@
+HTML (index.html)
+C'est le squelette de la page web. Il dit au navigateur comment afficher la page.
+
+<!DOCTYPE html> : Indique au navigateur qu'il s'agit d'une page HTML5.
+<head> : Contient des informations sur la page, comme le titre et le lien vers le fichier de style.
+<meta charset="UTF-8"> : Définit l'encodage des caractères.
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> : Ajuste la mise en page sur les appareils mobiles.
+<link rel="stylesheet" href="style.css"> : Lie le fichier de style CSS.
+<title>Simple Game</title> : Donne un titre à la page.
+<body> : Contient le contenu visible de la page.
+<div id="game-container"> : C'est le conteneur du jeu.
+<div id="character"></div> : C'est le personnage du jeu.
+<script src="script.js"></script> : Lie le fichier de script JavaScript.
+
+
+CSS (style.css)
+C'est le fichier de style qui personnifie la page.
+
+body : Ajuste les marges du corps de la page et le centre sur l'écran.
+#game-container : Le conteneur du jeu, avec une bordure et une couleur de fond.
+#character : Le personnage, avec une taille, une couleur de fond et positionné au centre du conteneur.
+
+JavaScript (script.js)
+C'est le cerveau du jeu qui permet au personnage de bouger pour l'instant. Tout ajout de gameplay
+se fait ici.
+
+const player = document.getElementById('character'); : Sélectionne le personnage.
+const gameContainer = document.getElementById('game-container'); : Sélectionne le conteneur du jeu.
+let playerX = gameContainer.clientWidth / 2; : Position initiale du joueur en X.
+let playerY = gameContainer.clientHeight / 2; : Position initiale du joueur en Y.
+movePlayer(0, 0); : Initialise la position du joueur.
+document.addEventListener('keydown', ...) : Écoute les touches du clavier.
+function movePlayer(deltaX, deltaY) : Fonction pour déplacer le joueur.
+playerX += deltaX; et playerY += deltaY; : Met à jour les coordonnées du joueur.
+const leftBoundaryX = 0 + playerMiddleX; et autres : Définit les limites du déplacement.
+if (playerX < leftBoundaryX) playerX = leftBoundaryX; et autres : Vérifie et ajuste les limites.
+player.style.left = playerX + 'px'; et player.style.top = playerY + 'px'; : Met à jour la position du joueur visuellement.
