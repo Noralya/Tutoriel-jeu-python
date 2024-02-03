@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+    
+  <progress value="0" max="100" id="scroll-progress"></progress>
+
+    <div style="display: flex;">
+        <section style="flex: 2; margin-left: 20px;">
+        <h1>Étape 3: Créer un personnage (enfin un carré pour l'instant..)</h1>
+        <p>Pour l'instant notre premier personnage va être un petit carré coloré comme dans l'exemple au tout début du tutoriel.</p>
+        <p>Pour se faire nous allons "initialiser" donc créer les outils dont on a besoin pour faire ce carré. Commençons par les couleurs.</p>
+        <h2>Les couleurs</h2>
+        <p>Revenons AU DESSUS de notre boucle while. C'est là que nous allons créer nos couleurs.</p>
+        <p>Pour se faire, il faut savoir que nous avons besoin de trois chiffres, chacun représentant les couleurs primaires (rouge, vert et bleu),
+            les mélanger va pouvoir créer d'autres couleurs. Mais voyons d'abord comment faire ces trois couleurs.</p>
+        <p>Sachant que la valeur maximale à donner pour avoir une couleur entière est 255. Voici comment faire du rouge, du vert et du bleu :</p>
+        <pre><code><p>rouge = (255, 0, 0)</p><p>vert = (0, 255, 0)</p><p>bleu = (0, 0, 255)</p></code></pre>
+        <p>Tu peux maintenant t'amuser à changer les valeurs et créer différentes couleurs !</p>
+        <h2>Le carré</h2>
+        <p>Pour céer notre petit personnage,rien de bien compliqué, pygame est là pour nous aider (encore !). Voici la fonction qui créer un carré ou un rectangle.</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/CreerCarree.PNG" alt="CreerCarree.PNG">
+        </div>
+        Ici on a besoin de quatre valeurs :
+        <li>x : La position horizontale du carré</li>
+        <li>y : La position verticale du carré</li>
+        <li>largeur : Sa taille en largeur</li>
+        <li>hauteur : Sa taille en hauteur</li>
+        <p>Amuses toi à mettre les chiffres que tu veux à la place !</p>
+        <p>Maintenant affichant tout ça ! Retourne dans ta boucle et écris ça tout en bas :</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/CouleurFenetre.PNG" alt="CouleurFenetre.PNG">
+        </div>
+        <p>Comme tu as peut-être compris, la fonction fill() qui signifie "remplir" va donc remplir la fenêtre de la couleur que tu veux (bleu dans l'exemple).</p>
+        <p>Ensuite ! Nous aurons besoin de plusieur éléments pour afficher notre carré : la fenêtre où le mettre, sa couleur, et sa forme.</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/AfficherCarre.PNG" alt="AfficherCarre.PNG">
+        </div>
+        <p>Encore une fois tu peux changer sa couleur comme tu le souhaite. Tu n'as plus qu'à rajouter cette fonction importante qui va lancer tous les affichages :</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/AffichageUpdate.PNG" alt="AffichageUpdate.PNG">
+        </div>
+        <p>Cette fonction va constemment mettre à jour tout ce qui va être afficher dans notre fenêtre</p>
+        </section>
+    </div>
+
+    <div><section>
+        <h2>Étape 4: Bouger notre carré</h2>
+        <p>Revenons au dessus de ces fonctions d'affichage. Ici nous allons créer des 4 conditions pour que le joueur aille dans 4 directions. Avant ça,
+        nous allons faire un grand if qui va détecter si le joueur appuie sur le clavier.</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/IfKeydown.PNG" alt="IfKeydown.PNG">
+        </div>
+        <p>Pour traduire cette ligne, on dit en gros si il se passe quelque chose et que c'est égal au fait qu'on appuie sur le clavier, alors on va pouvoir faire 
+            quelque chose...</p>
+        <p>On va donc chercher à changer la position horizontale (x) et la position verticale (y) du joueur selon la touche appuyée. Voici comment faire :</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/BougerJoueur.PNG" alt="BougerJoueur.PNG">
+        </div>
+        <p>Ici, si la touche ("key") est Q alors alors la position horizontale va rétrécir et aller vers la gauche. Pareil quand on appuie sur Z,
+            la position verticale va rétrécir et aller vers le haut. Voici un schéma qui représente la fenêtre pour que tu comprenne mieux.</p>
+        <p>En gros, plus augmente nos positions, plus on va en bas à droite de l'écran.</p>
+        <p>Maintenant que tu sais ça, ton exercice est de faire pareil pour les touches D et S pour aller à droite et en bas.</p>
+        <p>Bon courage !</p>
+    </section></div>
+
+    <div class="secret-code-container" style="margin-top: 100px;">
+      <p>Que fait ce mélange de couleurs ? (127, 127, 0)</p>
+    </div>
+
+
+    <div class="secret-code-container" style="margin-top: 50px; margin-bottom: 50px;">
+      <label for="secret-code">Code secret :</label>
+      <input type="password" id="secret-code" />
+      <button onclick="checkSecretCode('jaune', 'index4.html')">Vérifier</button>
+    </div>
+
+  <footer>
+    <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
