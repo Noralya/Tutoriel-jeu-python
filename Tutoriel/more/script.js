@@ -10,12 +10,12 @@ document.addEventListener('scroll', function () {
 });
 
 
-function checkSecretCode() {
+function checkSecretCode(code, file) {
   const secretCodeInput = document.getElementById('secret-code');
   const secretCode = secretCodeInput.value;
 
-  if (secretCode === "pygame") {
-    window.open('more/index2.html', '_blank');
+  if (secretCode === code) {
+    window.open(file, '_blank');
   } else {
     alert('Code secret incorrect. Réessaie !');
   }
