@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+    
+  <progress value="0" max="100" id="scroll-progress"></progress>
+
+    <div style="display: flex;">
+        <section style="flex: 2; margin-left: 20px;">
+        <h1>Étape 5: Les collisions</h1>
+        <p>Maintenant que ton carré peut se déplacer, il va nous manquer les collisions ! Si jamais tu ne sais pas ce que c'est; c'est lorsque deux objets ce touchent,
+            et qu'ils ne se traversent pas. Par exemple les bords de la map qui sont des murs et notre personnage qui ne sort pas de la map. 
+            Et oui en effet si tu ne le fais pas ton personnage pourrait sortir de la map !</p>
+        <p>Tu dois donc te demander, mais comment dire à notre programme qu'un mur existe physiquement pour le jeu ?</p>
+        <p>Tu vas voir c'est pas compliqué.</p>
+        <p>Tout d'abord il faut comprendre un point essentiel, ton écran est composé de pixels, et de nos jours un écran a généralement 1920 pixels de largeur et
+            1080 pixel de hauteur (normalement tu le sais déjà vue que tu as surement déjà essayé de mettre ton jeu en plein écran). 
+            Chaque pixel est numéroté de gauche à droite et de haut en bas. Ce qui veut dire que le tout premier pixel est numéroté 0 et le dernier 1920 ou 1080,
+            selon si tu regarde sur en largeur ou en hauteur.</p>
+        <p>Je sais ça fait surement beaucoup de mots pour dire pas grand choses. Mais maintenant que tu sais ça, tu vas voir que c'est bien pratique !</p>
+        <p>L'écran ou la fenêtre de jeu fait une certaine taille comme dit plus haut, mais c'est pas la seule chose à avoir une taille en pixel,
+            et oui ton carré a aussi une certaine taille défini par des pixels. Ce qui veut dire que tu peux vérifié si ton carré ce trouve toujours au bon endroit ou non.</p>
+        <p>Donc pour faire les collisions, si t'as tout bien suivi, tu as surement compris que tu peux regarder si ton carré se trouve bien dans la fenêtre.
+            tu peux par exemple pour vérifier dans la largeur faire ceci:</p>
+            <div style="margin-left: 100px; margin-top: 50px; margin-bottom: 50px;">
+          <img src="../assets/ConditionIfLargeur.PNG" alt="BoucleWhile PNG">
+        </div>
+        <p>Ce qui veut dire en français, si mon carré veut sortir vers la gauche de mon écran on l'empêche de sortir.
+            Et s'il veut sortir de l'autre côté on l'empêche aussi.</p>
+        <p>Maintenant a toi d'essayé de fait la même chose mais pour la hauteur cette fois ci ! (petit indice on utilisera y).</p>
+        
+        </section>
+        
+        <section style="flex: 1; margin-top: 60px; margin-left: 0;">
+            <div class="tenor-gif-embed" data-postid="14003779" data-share-method="host" data-aspect-ratio="1.78571" data-width="300%">
+            <a href="https://tenor.com/view/anime-love-anime-slam-face-against-wall-girl-against-wall-anime-girls-gif-14003779">Anime Love Anime Slam GIF</a>
+            from <a href="https://tenor.com/search/anime+love-gifs">Anime Love GIFs</a></div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </section>
+
+        <section style="flex: 2; margin-top: 900px;">
+          <div class="tenor-gif-embed" data-postid="16157006" data-share-method="host" data-aspect-ratio="1.50943" data-width="100%">
+            <a href="https://tenor.com/view/astro-boy-go-through-anime-wall-break-through-gif-16157006">Astro Boy Go Through GIF</a>
+            from <a href="https://tenor.com/search/astro+boy-gifs">Astro Boy GIFs</a></div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+          </section>
+        </div>
+        
+        <div><section>
+      <h2>Les murs</h2>
+      <p>Maintenant que tout ça est fait, tu vas pouvoir créer des murs un peu ou tu veux sur l'écran a toi de choisir ou les placer.</p>
+      <p>Je vais te donner deux petits indices pour créer un mur, attention il faudra surement changer ou ajouter certaines choses dans le code !!!!!!!!!!!!</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/InitialisationDuMur.PNG" alt="InitialisationDuMur PNG">
+      </div>
+      <p>Une fois le mur en place tu n'as plus qu'a faire les collisions avec lui ! (ATTENTION IL MANQUE PLUSIEURS CHOSES QU'IL FAUT DEVINER)</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/VérificationCollisionsMur.PNG" alt="VérificationCollisionsMur PNG">
+      </div>
+    </section></div>
+
+  <footer>
+    <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
