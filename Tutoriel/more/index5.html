@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+    
+  <progress value="0" max="100" id="scroll-progress"></progress>
+
+    <div style="display: flex;">
+        <section style="flex: 2; margin-left: 20px;">
+        <h1>Étape 6: A L'TTAAAAAAQUE !!!</h1>
+
+        <p>Il est mantenant temps de s'amuser un peu et d'avoir de quoi reellement jouer ! On va donc rajouter tout plein de projectiles qu'on va pouvoir tirer.</p>
+		<p>Pour se faire nous allons faire une liste qui va stocker nos projectiles comme il suit, bien sur
+			a vous de deviner u est-ce qu'on L'INITIALISE. (oui, c'est un leger indice)</p>
+		
+        <div style="margin-left: 400px; margin-top: 50px; margin-bottom: 50px;">
+          <img src="../assets/ProjectilesListe.PNG" alt="ProjectilesListe PNG">
+        </div>
+
+		<p>Une liste est un type de variable dans le quel on peut y mettre plusieur autres variables dedans tant quelles ont le meme type, c'est a dire 
+			que es chiffres, que des lettres, ou autres... </p>
+		<p>Donc comme nos couleurs sont des listes contenant chacune trois chiffres, ici on ne sait pas combien il y aura de 
+			projectiles en plus du fait qu'ils ont un type plus complique qu'un simple chiffre ou une simple lettre.</p>
+		<p>Ainsi, on va juste creer une liste vide, une sorte de sac qui plus tard aura nos projectiles</p>
+
+		<p>Quand c'est fait nous allons maintenant dans la boucle for qui detecte quand le joueur appuie sur une touche et nous allons y
+			ajouter 3 choses.</p>
+		<p>Une condition qui regarde si on appuie sur la touche d'attaque (ici espace mais tu peux changer avec la touche que tu prefere !),
+			la creation D'UN SEUL projectile car on en lance un a la fois, et enfin on place ce projectile dans notre liste comme ca chacun
+			sera stocke et on pourra les utiliser comme on veut !</p>
+
+		<div style="margin-left: 400px; margin-top: 50px; margin-bottom: 50px;">
+			<img src="../assets/CreationTirs.PNG" alt="CreationTirs PNG">
+		</div>
+
+		<p>Dooooonc, maintenant qu'on a ca quel est le probleme ? Oui c'est une invitation a lancer ton programme et verifier ce qu'il se passe, mais tu peux
+			bien sur juste continuer a lire cette ligne qui va commencer a devenir un peu trop longue...</p>
+		<p>Et bien ne se passe ! Ce n'est pas parce qu'on a initialise des tirs qu'il vont s </p>
+
+        <p>En terme de programmation voici un petit exemple de boucle :</p>
+        <pre><code><p>compteur = 1</p><p>while compteur <= 10:</p>
+        <p>    print("Voici une phrase qui va être affichée 10 fois.")</p>
+        <p>    compteur = compteur + 1</p></code></pre>
+        <p>Dans cet exemple, on comprends que notre compteur va gagner +1 jusqu'à atteindre 10. En même temps on écrit une phrase qui sera affiché 10 fois vu que 
+          print fait aussi parti de notre boucle. Toutes les instructions mises dans une boucle vont forcément être répetées !</p>
+        <p>Lorsque tu écris une boucle while, il faut faire attention à deux choses :</p>
+          <ul>-la première ligne se termine toujours par deux points “:”</ul>
+          <ul>-le bloc de code qui contient les instructions doit être indiqué par une indentation, c'est-à-dire un léger décalage vers la droite avec la touche TAB. 
+          C’est comme ça que Python fait la différence entre ce qui est inclus dans la boucle et le reste du programme.</ul>
+        <p>Maintenant, si tu met en condition de boucle True, ta boucle sera INFINIE ! Ainsi, il n'y aura plus qu'à ajouter break ou une fonction qui sert à arrêter ton 
+          programme quand tu en aura envie. Par exemple quand le joueur à gagné ou quand il cliquera sur la petite croix en haut de la fenêtre. Bah tiens ! Occupons nous de ça !</p>
+        <p>Mais avant ça écris ta boucle infinie. A partir de maintenant, on va presque tout le temps écrire dedans.</p>
+        <p>Quand c'est fait, tu peux passer à la suite et voir un autre type de boucle qui fonctionne presque pareil.
+        </p>
+        </section>
+
+        <section style="flex: 1; margin-top: 60px;">
+          <div class="tenor-gif-embed" data-postid="13705323" data-share-method="host" data-aspect-ratio="1.78571" data-width="300%">
+            <a href="https://tenor.com/view/gon-freecss-wondering-thinking-gif-13705323">Gon Freecss Wondering GIF</a>
+            from <a href="https://tenor.com/search/gon+freecss-gifs">Gon Freecss GIFs</a></div>
+           <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </section>
+        
+        <section style="flex: 2; margin-top: 1400px;">
+          <div class="tenor-gif-embed" data-postid="16043645" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%">
+            <a href="https://tenor.com/view/my-hero-academia-izuku-nerd-taking-notes-study-gif-16043645">My Hero Academia Izuku GIF</a>
+            from <a href="https://tenor.com/search/my+hero+academia-gifs">My Hero Academia GIFs</a></div>
+           <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </section>
+    </div>
+
+    <div><section>
+      <h2>Les boucles FOR</h2>
+      <p>Cette façon de crée une boucle est un peu plus complexe 😰 donc il va falloir être très attentif ! Mais si tu ne comprend pas totalement
+        le concept, ce n'est pas très grave tu n'es sûrement pas le seul et on fera sûrement un cours tous ensemble pour voir ça plus en détails</p>
+      <p>Ce qui a de différent par rapport à while, c'est que for à besoin d'une liste. Une liste est un type de valeur très fort car elle peut
+        contenir en elle plusieurs valeur. Cette liste peut par exemple avoir plusieurs mots ou plusieurs chiffres. Voici un exemple de comment ça s'écrit :</p>
+      <pre><code><p>liste = ["Saitama", "Ichigo", "Naruto"]</p></code></pre>
+      <p>Comme tu peux le voir, cette liste contient 3 mots (ou plutôt 3 noms dans ce cas, mais bref !)</p>
+      <p>On a donc notre liste et notre boucle for va la parcourir, c'est-à-dire qu'elle va regarder les éléments qui sont dedans un par un.</p>
+      <pre><code><p>liste = ["Saitama", "Ichigo", "Naruto"]</p>
+        <p>for personnage in liste:</p><p>    print(personnage)</p></code></pre>
+      <p>La boucle for commence par la ligne for personnage in liste:. Cette ligne définit la variable personnage (ce qui est pratique, car on a pas à le faire avant nous-même).
+        Du coup ça lui donne la valeur du premier élément de la liste. Dans cet exemple, personnage devient alors "Saitama". Ensuite, on entre dans une boucle. La 
+        boucle va répéter print(personnage) tant que la valeur de personnage n'est pas égale à la valeur du dernier élément de la liste (donc Naruto).
+        À chaque tour de la boucle, la valeur de personnage est remplacée par la valeur du prochain élément de la liste, chaque élément est séparé par
+        une virgule. Cela signifie que la première fois que la boucle s'exécute, la valeur de personnage est "Saitama". La deuxième fois que la boucle s'exécute, 
+        la valeur de personnage est "Ichigo". Et ainsi de suite. Quand la valeur de personnage atteint la valeur du dernier élément de la liste, la boucle s'arrête</p>
+      <p>Maintenant que vous savez ça, vous pouvez ENFIN coder ! 😅</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/BoucleForGame.PNG" alt="BoucleForGame PNG">
+      </div>
+      <p>C'est peut-être un peu confus maintenant qu'on y ajoute de l'anglais et un fonction de pygame qu'on ne connait pas... Mais c'est pas si compliqué,
+        ici on  crée une boucle qui va parcourir tous les événements qui se produisent dans le jeu. La boucle va aller sur chaque événement et 
+        les mettre dans la variable event.</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/BoucleForAndIfGame.PNG" alt="BoucleWhileForAndIfGame PNG">
+      </div>
+      <p>Tu l'as peut-être compris ce qu'il se passe ici, on vérifie si l'événement actuel est de type QUIT (genre on clique sur la croix). Si c'est le cas, la boucle va 
+        exécuter le code qui se trouve dans le if que voici :</p>
+      <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/BoucleExit.PNG" alt="BoucleExit PNG">
+      </div>
+      <p>Enfin, on dit à pygame et au programme de s'arrêter. Si tu as compris la logique, tu peux lancer ton programme pour vérifier si tout va bien !
+        Normalement tu as une fenêtre qui s'affiche jusqu'à que tu décide de la fermer. 👍</p>
+    </section></div>
+
+    <div class="secret-code-container" style="margin-top: 100px;">
+      <p>Comment appelle t'on la boucle qui permet que notre fenêtre ne se ferme pas ?</p>
+    </div>
+
+
+    <div class="secret-code-container" style="margin-top: 50px; margin-bottom: 50px;">
+      <label for="secret-code">Code secret :</label>
+      <input type="password" id="secret-code" />
+      <button onclick="checkSecretCode('infinie', 'index3.html')">Vérifier</button>
+    </div>
+
+  <footer>
+    <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
