@@ -94,10 +94,36 @@
         <br>
 
         <p>Si tu n'arrive toujours pas à comprendre, n'hésite pas à nous appeler pour demander une meilleure explication.</p>
-    </div>
 
-    <div class="secret-code-container" style="margin-top: 100px;">
-        <p>Réécrit cette ligne en la modifiant pour que les tirs aillent vers la gauche : projectile.x += 1</p>
+        <br>
+
+        <p>Normalement à ce stade, tu dois te dire que c'est déjà très bien mais que ça va beaucoup trop vite. Et tu as parfaitement raison !</p>
+        <p>C'est donc pour cela que nous allons limiter les ips (images par secondes ou fps frames per seconds) à 60. Tu vas voir ça nous fait modifier pas mal de trucs,
+            mais au moins ça ira moins vite.</p>
+        <p>pour faire ça on va devoir créer une nouvelle variable, que l'on va nommer "clock" pour montre en anglais. car elle va compter les tours de boucles pour nous.</p>
+        <p>Et ensuite on va lui donner le nombre d'ips qu'on veut et le convertir en secondes (tu verras c'est bien pratique pour la suite).</p>
+        <p>Mais pas si vite ! On va stocker le temps écouler dans une autre varriable qu'on va créé a l'instant qu'on nommera "tempsE" pour temps écouler.</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/FPS.PNG" alt="FPS PNG">
+        </div>
+        <br>
+
+        <p>Maintenant que c'est fait notre jeu est bloqué à 60ips, mais ce n'est pas car si tu essai tu verras tu peux toujours tirrer très vite !</p>
+        <p>Mais comment faire pour que les tirs soient moins rapide tu vas me dire; et bien c'est très simple, nous allons mesurer le temps qui c'est écouler entre deux tirs,
+            et définir une cadance de tir.</p>
+        <p>Donc il va nous falloir deux nouvelles variables, une qu'on peut appeler temps_dernier_tir et une autre appeler cadance_tir.</p>
+        <p>temps_dernier_tir va nous servir à mettre à jour notre chronomettre. C'est a dire qu'a chaque fois que notre boucle ce termine on va ajouter le tempsE a notre temps_dernier_tir.</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/MAJ_CHRONO.PNG" alt="MAJ_CHRONO PNG">
+        </div>
+        <p>Et donc maintenant, il nous reste plus qu'a modifier notre tir de projectile, ainsi que la façon dont on met a jour ces derniers a l'écran et le tour est jouer !</p>
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/PROJO_FPS.PNG" alt="PROJO_FPS PNG">
+        </div>
+
+        <div class="secret-code-container" style="margin-top: 100px;">
+            <p>Réécrit cette ligne en la modifiant pour que les tirs aillent vers la gauche : projectile.x += 1</p>
+        </div>
     </div>
     
     
