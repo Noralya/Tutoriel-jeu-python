@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+    
+    <progress value="0" max="100" id="scroll-progress"></progress>
+
+    <h1>Un peu de propreté !</h1>
+
+    <p>Depuis le début des leçons on rajoute du code sur du code sur du code... Et ça devient vite le bizard ! C'est de moins en moins agréable 
+        de s'y retrouver pour modififier les choses et en rajouter. On va donc tout trier, mettre chaque chose dans des fonctions pour une lisibilité
+        plus claire et on va aussi rajouter quelque commentaires pour indiquer ce que nos bouts de code font.
+    </p>
+
+    <p>Les commentaire ont un # avant, ça fait en sorte que quand ton code se lance il ignore ce qu'il y a écrit sur cette ligne, code comme phrase.
+        Ca peut servir à juste faire des petites notes pour s'y retrouver mais ça peut aussi servir pour les tests ! Par exemple imaginous qu'on se
+        retrouve avec un bug, parfois en commentant certaines parties du code ça fait qu'elle sera ignoré et donc voir si telle ou telle ligne 
+        créait le soucis.
+    </p>
+    
+    <p>Bon, maintenant qu'on sait ça il n' y a plus qu'à recopier tout ce code qui est de base aussi le votre, trié et arrangé par vos super profs !
+        On a mit le tout dans des fichiers différents mais n'hésite pas à regrouper les fonctions comme tu le sens.
+    </p>
+
+    <p>A vos claviers !</p>
+
+    <h1>Initialisation.py</h1>
+
+    <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/Initialisation.PNG" alt="Initialisation PNG">
+    </div>
+
+    <h1>Gameplay.py</h1>
+
+    <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/Gameplay.PNG" alt="Gameplay PNG">
+    </div>
+
+    <h1>Ennemis.py</h1>
+
+    <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/Ennemis.PNG" alt="Ennemis PNG">
+    </div>
+
+    <h1>Tirs.py</h1>
+
+    <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/Tirs.PNG" alt="Tirs PNG">
+    </div>
+
+    <h1>Jeu.py</h1>
+    <p>Ici on va ajouter que nous avons besoin de certain fichiers pour y importer nos fonctions.</p>
+
+    <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/Jeu1.PNG" alt="Jeu1 PNG">
+    </div>
+
+    <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+        <img src="../assets/Jeu2.PNG" alt="Jeu2 PNG">
+    </div>
+
+    <div class="secret-code-container" style="margin-top: 100px;">
+        <p>Quand c'est fait appele ton prof préféré (choisi bien) pour qu'il te le donne le code.</p>
+    </div>
+
+    <div class="secret-code-container" style="margin-top: 50px; margin-bottom: 50px;">
+      <label for="secret-code">Code secret :</label>
+      <input type="password" id="secret-code" />
+      <button onclick="checkSecretCode('good', 'index7.html')">Vérifier</button>
+    </div>
+
+    <footer>
+        <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
