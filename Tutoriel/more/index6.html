@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>🎮💻</title>
+</head>
+
+<body>
+    
+  <progress value="0" max="100" id="scroll-progress"></progress>
+
+    <div style="display: flex;">
+        <section style="flex: 2; margin-left: 20px;">
+        <h1>Étape 7: Heu... On attaque quoi en fait ?</h1>
+
+        <p>Maintenant prêt au combat, votre joueur joueur a besoin de quelqu'un contre qui se battre !</p>
+        <p>Pour l'instant on va rien faire de compliqué, juste faire apparaitre des carrés qui vont passer sur l'écran. Le but de de besoin
+            revoir le fonctionnement et l'utilisation des listes. On affinera le comportement de nos ennemis plus tard.
+        </p>
+
+        <br>
+
+        <p>Bon du coup pour commencer on va vous demander de réfléchir un peu (nooooooooooooooooooooooooooooooon !!!!!) et de faire deux initialisations
+            tout seuls. Basez vous sur les cours précédents pour vous aider et créez une liste ennemis (c'est comme les tirs) et une limite d'ennemi qui sera pour l'instant à 
+            5.
+        </p>
+        <p>C'est là que ça va devenir un peu plus casse tête...</p>
+
+        <div class="tenor-gif-embed" data-postid="14445379" data-share-method="host" data-aspect-ratio="1.78771" data-width="50%">
+            <a href="https://tenor.com/view/sinister-smile-anime-evil-gif-14445379">Sinister Smile GIF</a>
+            from <a href="https://tenor.com/search/sinister-gifs">Sinister GIFs</a>
+        </div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        <p>Avec le code suivant on va gérer nos ennemis en commençant par en créer jusqu'à notre limite histoire qu'on ne se retrouve pas avec
+            une floppée de carré sur l'écran, ça deviendrait ingérable. Ensuite on va les créer, leur donner une vitesse aléatoire et les stocker
+            dans la liste.
+        </p>
+
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/ListeEnnemis.PNG" alt="ListeEnnemis PNG">
+        </div>
+
+        <p>C'est un peu complexe donc je vais expliquer deux trois trucs précis pour bien comprendre. Notre if regarde la taille (avec len) de notre liste
+            d'ennemis pour la comparer à notre limite pour pas en créer plus que nécessaire. Ensuite on va créer le rectangle en mettant la position 
+            de base sur le côté à une hauteur aléatoire, ça évitequ'ils spawn tous en file... Ca serait honnêtement ridicule. On et aussi la vitesse
+            a une valeur au hazard puis comme avec nos projectiles on met tout dans notre sac d'ennemis !
+        </p>
+
+        <br>
+
+        <p>Après ça ! On va parcourir notre liste et pour chaque ennemi on va les dessiner et les déplacer vers la droite.</p>
+
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/DessinerEnnemis.PNG" alt="DessinerEnnemis PNG">
+        </div>
+
+        <p>On va aussi rajouter le fait de supprimer les ennemis qui ont traversé l'écran pour qu'on puisse en créer d'autres.</p>
+
+        <div style="margin-left: 50px; margin-top: 50px; margin-bottom: 50px;">
+            <img src="../assets/SupprimeEnnemis.PNG" alt="SupprimeEnnemis PNG">
+        </div>
+
+        <br>
+
+        <p>Voilà c'est tout !</p>
+    </div>
+
+    <div class="secret-code-container" style="margin-top: 100px;">
+        <p>Quelle est la fonction pour calculer la taille d'une liste ?</p>
+    </div>
+    
+    
+    <div class="secret-code-container" style="margin-top: 50px; margin-bottom: 50px;">
+        <label for="secret-code">Code secret :</label>
+        <input type="password" id="secret-code" />
+        <button onclick="checkSecretCode('len', 'index7.html')">Vérifier</button>
+    </div>
+
+  <footer>
+    <p>Réalisé avec ❤️ par Anthony & Sarah (mais surtout Sarah...)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
